@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHero tube</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -14,6 +20,8 @@
   
   <nav class="max-w-screen-xl mx-auto mt-10 mb-10">
     <div class="navbar bg-base-100 flex flex-col lg:flex-row">
+
+      <!-- start -->
       <div class="flex justify-center lg:navbar-start lg:justify-start w-1/4">
         
         <img src="Logo.png" alt="">
@@ -21,12 +29,12 @@
 
       <!-- center -->
       <div class="navbar-center w-1/2 lg:flex justify-center mt-4 lg:mt-0">
-          <a class="btn">Sort by view</a>
+          <a class="btn text-[#252525] bg-slate-200 ">Sort by view</a>
       </div>
 
       <!-- end -->
       <div class="flex justify-center lg:navbar-end lg:justify-end w-1/4 mt-4 lg:mt-0">
-        <a class="btn bg-[#FF1F3D] text-white">Blog</a>
+        <a href="blog.html" target="_blank" class="btn bg-[#FF1F3D] text-white">Blog</a>
       </div>
   </div>
   
@@ -37,11 +45,7 @@
   <div class="category-container">
     <div id="category-container" class="flex justify-center items-center gap-3 m-auto">
 
-      <!-- <button class="btn btn-outline btn-info">Info</button>
-      <button class="btn btn-outline btn-success">Success</button>
-      <button class="btn btn-outline btn-warning">Warning</button>
-      <button class="btn btn-outline btn-error">Error</button> -->
-
+      
     </div>
   </div>
 
@@ -51,6 +55,17 @@
    
 
   </div>
+
+  <!-- not found category -->
+    <div id="no-content" class="flex flex-col my-16 justify-center items-center">
+      <div>
+        <img src="Icon.png" alt="">
+      </div>
+  
+      <div class="mt-6 text-3xl font-bold text-center">
+        <h2>Oops!! Sorry, There is <br> no content here</h2>
+      </div>
+    </div>
   
   
   <script src="index.js"></script>

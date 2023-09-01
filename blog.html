@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog QA</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen items-center justify-center bg-gray-100">
+    <header class="text-center my-5 text-4xl font-semibold">
+        <h1>Blog Question Answers</h1>
+    </header>
+    
+
+    <div class="max-w-screen-xl max-auto">
+        
+        <!-- QA 1 -->
+        <div class ="shadow-xl  rounded-lg text-blue-950 p-6">
+            <h2 class="text-2xl font-semibold mb-3">Discuss the scope of var, let, and const</h2>
+            
+            <div class="mb-4">
+                <h3 class="text-xl font-medium">Var</h3>
+                <p class="text-gray-600">When a <span class="bg-slate-400 px-2 rounded-md">var</span> variable is declared outside a function, the scope is global. This means that any variable that is declared with <span class="bg-slate-400 px-2 rounded-md">var</span> outside a function block is available for use in the whole window.
+                <br>
+                <span class="bg-slate-400 px-2 rounded-md">var</span> is function scoped when it is declared within a function. This means that it can be accessed only within that function.
+                var variables can be re-declared and updated
+            </p>
+            </div>
+                
+            <div class="mb-4">
+                <h3 class="text-xl font-medium">let</h3>
+                <p class="text-gray-600">Anything within curly braces is a block. A variable declared in a block with <span class="bg-slate-400 px-2 rounded-md">let</span> is only available for use within that block.
+                <br>
+                <span class="bg-slate-400 px-2 rounded-md">let</span> can be updated but cannot be re-declared. Just like var, a variable declared with <span class="bg-slate-400 px-2 rounded-md">let</span> can be updated within its scope. Unlike <span class="bg-slate-400 px-2 rounded-md">var</span>, a <span class="bg-slate-400 px-2 rounded-md">let</span> variable cannot be re-declared within its scope.
+            </p>
+            </div>
+            
+            <div class="mb-4">
+                <h3 class="text-xl font-medium">const</h3>
+            <p class="text-gray-600">Variables declared with the <span class="bg-slate-400 px-2 rounded-md">const</span> maintain constant values. <span class="bg-slate-400 px-2 rounded-md">const</span> declarations are also block scoped. Like <span class="bg-slate-400 px-2 rounded-md">let</span> declarations, <span class="bg-slate-400 px-2 rounded-md">const</span> declarations can only be accessed within the block they were declared
+                <br>
+                <span class="bg-slate-400 px-2 rounded-md">const</span> cannot be updated or re-declared. This means that the value of a variable with <span class="bg-slate-400 px-2 rounded-md">const</span> remains the same within its scope.
+            </p>
+            </div>
+        </div>
+
+        <div class ="shadow-lg p-6 rounded-lg mt-8">
+            <h2 class="text-2xl font-semibold mb-3">Tell us the use cases of null and undefined</h2>
+
+            <!-- null -->
+            <div class="mb-4">
+                <h3 class="text-xl font-medium">null</h3>
+                <p class="text-gray-600"><span class="bg-slate-400 px-2 rounded-md">null</span> in JavaScript means an empty value and is also a primitive type in JavaScript. The variable which has been assigned as <span class="bg-slate-400 px-2 rounded-md">null</span> contains no value.
+                    <br>
+                    <span class="bg-slate-400 px-2 rounded-md">null</span> is basically an assignment value given to a variable. The variable which has been assigned as <span class="bg-slate-400 px-2 rounded-md">null</span> contains no value.
+                    When we assign <span class="bg-slate-400 px-2 rounded-md">null</span> as a value to any variable, it means that it is empty or blank. It is to show that the variable has no value. Also, <span class="bg-slate-400 px-2 rounded-md">null</span> is an object in JavaScript. When it gets assigned to a variable, it represents no value. <br> No value on purpose.
+                </p>
+            </div>
+
+            <!-- undefined -->
+            <div class="mb-4">
+                <h3 class="text-xl font-medium">undefined</h3>
+                <p class="text-gray-600"><span class="bg-slate-400 px-2 rounded-md">undefined</span>, on the other hand, means the variable has been declared, but its value has not been assigned.
+                    <br>
+                    As the name suggests, <span class="bg-slate-400 px-2 rounded-md">undefined</span> means "not defined". So we declare a variable but do not assign a value to it, the variable becomes <span class="bg-slate-400 px-2 rounded-md">undefined</span>.
+                    Unlike <span class="bg-slate-400 px-2 rounded-md">null</span>, the value of an <span class="bg-slate-400 px-2 rounded-md">undefined</span> variable is set by JavaScript as <span class="bg-slate-400 px-2 rounded-md">undefined</span>. When we do not pass an argument for a function parameter, the default value is taken as <span class="bg-slate-400 px-2 rounded-md">undefined</span>. Besides, when a function doesn't return a value, it returns <span class="bg-slate-400 px-2 rounded-md">undefined</span>. <br> It is declared but not defined.
+                </p>
+                
+            </div>
+
+        </div>
+
+
+        <div class ="shadow-lg p-6 rounded-lg mt-8 mb-8">
+            <h2 class="text-2xl font-semibold mb-3">What do you mean by REST API?</h2>
+
+            <!-- null -->
+            <div class="mb-4">
+                <!-- <h3 class="text-xl font-medium">null</h3> -->
+                <p class="text-gray-600">A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. <br>
+                    It is an architectural style for an application program interface (API) that uses HTTP requests to access and use data. That data can be used to GET, PUT, POST and DELETE data types, which refers to the reading, updating, creating and deleting of operations concerning resources. <br>
+                    In simple terms, a REST API is like a set of rules for computers to talk to each other over the internet. It helps them share information and do things like sending, receiving, updating, or deleting data.
+                    Imagine it's like ordering food online. You use a menu (the API) to choose what you want, like a pizza (a specific piece of data). Then, you tell the restaurant (the server) what you want, and they prepare your order. The restaurant doesn't remember your previous orders; you have to tell them every time.
+                    
+                    So, a REST API is like a menu for computers to order and exchange data over the internet. It keeps things organized and helps different systems work together smoothly.
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>
