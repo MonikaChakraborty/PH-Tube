@@ -28,7 +28,7 @@ const handleLoadVideos = async (categoryId) => {
     const data = await response.json();
 
     const cardContainer = document.getElementById("card-container");
-    
+
     const noContent = document.getElementById("no-content");
  
 
@@ -46,15 +46,24 @@ const handleLoadVideos = async (categoryId) => {
     data.data.forEach((videos) => {
         // console.log(typeof videos);
       const div = document.createElement('div');
+      const timeInSeconds = videos.others?.posted_date;
+      const timeToHours = Math.floor(timeInSeconds/3600);
+      const remainingSeconds = timeInSeconds % 3600;
+      const minutes = Math.round(remainingSeconds/60);
+
+      const time = (`${timeToHours} hrs ${minutes} min ago`);
+
+      // console.log(time);
 
         div.innerHTML = `
         <div class="card card-compact bg-base-100 shadow-xl h-[350px]">
         <figure><img src=${videos?.thumbnail} alt="" /></figure>
   
         <div class="flex justify-end items-end mr-2">
-          <div class="text-white text-xs font-light bg-slate-900 rounded-lg w-2/5 text-center p-1 relative -top-10">
-            <p>3 hrs 56 min ago</p>
-          </div>
+          ${timeInSeconds ? `<div class="text-white text-xs font-light bg-slate-900 rounded-lg w-2/5 text-center p-1 relative -top-10">
+          <p> ${time}</p>
+          </div>` : ''}
+           
         </div>
         <div class="card-body">
           
@@ -83,7 +92,7 @@ const handleLoadVideos = async (categoryId) => {
 
           </div>
   
-          <p class="ml-16">${videos.others.views}</p>
+          <p class="ml-16 text-sm text-slate-600">${videos.others.views}</p>
           <div class="card-actions justify-end">
             
   
