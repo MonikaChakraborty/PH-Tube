@@ -52,22 +52,25 @@ const handleLoadVideos = async (categoryId) => {
 
       const div = document.createElement('div');
       const timeInSeconds = videos.others?.posted_date;
-      const timeToHours = Math.floor(timeInSeconds/3600);
-      const remainingSeconds = timeInSeconds % 3600;
-      const minutes = Math.round(remainingSeconds/60);
+      const timeInSecondsFloat = parseFloat(timeInSeconds);
+      // console.log(typeof timeInSecondsFloat);
+      const timeToHours = Math.floor(timeInSecondsFloat/3600);
+      const remainingSeconds = timeInSecondsFloat % 3600;
+      const minutes = Math.floor(remainingSeconds/60);
+      
+
 
       const time = (`${timeToHours} hrs ${minutes} min ago`);
 
-      // const sortByViews = videos.sort((a,b) => a.others.views - b.others.views);
 
       // console.log(time);
 
         div.innerHTML = `
-        <div class="card card-compact bg-base-100 shadow-xl bg-cover h-[350px]">
-        <figure><img class="w-full h-[180px] " src=${videos?.thumbnail} alt="" /></figure>
+        <div class="card card-compact bg-base-100 shadow-xl w-[300px] h-[400px] max-w-screen-xl mx-auto">
+        <figure><img class="w-full h-[180px] object-cover" src=${videos?.thumbnail} alt="" /></figure>
   
-        <div class="flex lg:justify-end items-end ml-72 md:ml-64 lg:ml-0 mr-0 lg:mr-2">
-          ${timeInSeconds ? `<div class="text-white text-xs font-light bg-slate-900 rounded-lg w-24 lg:w-2/5 text-center p-1 relative -top-10">
+        <div class="flex lg:justify-end items-end ml-48  lg:ml-0 mr-2">
+          ${timeInSeconds ? `<div class="text-white text-xs font-light bg-slate-900 rounded-lg w-28  lg:w-2/5 text-center p-1 relative -top-10">
           <p> ${time}</p>
           </div>` : ''}
            
